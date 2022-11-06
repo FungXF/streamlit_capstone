@@ -237,7 +237,8 @@ if submit:
 
         response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
         names = response.json()['names']
-
+        names = names['names']
+        
         #display with the columns
         colres1, colres2, colres3 = st.columns(3)
         # col1 = st.columns(1)
