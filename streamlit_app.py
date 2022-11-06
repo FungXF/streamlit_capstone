@@ -236,7 +236,7 @@ if submit:
         api_route = '/predict'
 
         response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
-        names = response.json()
+        names = response.json()['names']
 
         #display with the columns
         colres1, colres2, colres3 = st.columns(3)
@@ -259,5 +259,3 @@ if submit:
         # #     st.image(posters[4])
         with colres6:
             st.markdown((' '.join(names[5].split('_'))).title())  
-
-            
