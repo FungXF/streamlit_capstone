@@ -216,6 +216,15 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 #     with colrand6:
 #         st.markdown((' '.join(namess[5].split('_'))).title())   
 
+submit3 = st.button("DO NOT PRESS")
+
+if submit3:
+    
+    st.markdown(   f”””   <style>
+       p {
+       background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
+       }
+       </style>   ”””,   unsafe_allow_html=True)
             
 submit = st.button('Show Recommendation')
 
@@ -224,13 +233,13 @@ if submit:
         st.error("**Choose exactly 5 options!**")
         
     else:
-        profile = {'sightseeing': sightseeing, 'land tour': land_t, 'air tour': air_t, 'sea tour': sea_t,
-                   'park': park, 'city': in_city, 'nature': nat, 'accommodation': accom,
-                   'camping': camp, 'cruise': crui, 'island': islands, 'entertainment': enter, 
-                   'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
-                   'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
-                   'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-                   'rental': rental}
+        profile = {'sightseeing': sight, 'land tour': land_t, 'air tour': air_t, 'sea tour': sea_t,
+           'park': park, 'city': in_city, 'nature': nat, 'accommodation': accom,
+           'camping': camp, 'cruise': crui, 'island': islands, 'entertainment': enter, 
+           'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
+           'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
+           'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
+           'rental': rental}
         
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
