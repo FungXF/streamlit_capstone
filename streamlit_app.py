@@ -236,7 +236,7 @@ if submit:
         api_route = '/predict'
 
         response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
-        names = response.json()['names']
+        names = response.json()
         names = names['names']
         
         #display with the columns
