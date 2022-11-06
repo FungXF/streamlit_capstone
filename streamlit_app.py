@@ -221,6 +221,23 @@ submit3 = st.button("DO NOT PRESS")
 if submit3:
 
     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
+
+    def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+    add_bg_from_url() 
+    
     
     st.markdown(   f"""   <style>
        p {
@@ -236,12 +253,12 @@ if submit:
         
     else:
         profile = {'sightseeing': sight, 'land tour': land_t, 'air tour': air_t, 'sea tour': sea_t,
-           'park': park, 'city': in_city, 'nature': nat, 'accommodation': accom,
+           'park': parks, 'city': in_city, 'nature': nat, 'accommodation': accom,
            'camping': camp, 'cruise': crui, 'island': islands, 'entertainment': enter, 
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
            'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-           'rental': rental}
+           'rental': rentals}
         
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
