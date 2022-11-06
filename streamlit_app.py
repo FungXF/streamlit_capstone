@@ -219,12 +219,12 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 submit3 = st.button("DO NOT PRESS")
 
 if submit3:
-    
-    st.markdown(   f”””   <style>
+
+    st.markdown(   f"""   <style>
        p {
        background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
        }
-       </style>   ”””,   unsafe_allow_html=True)
+       </style>   """,   unsafe_allow_html=True)
             
 submit = st.button('Show Recommendation')
 
