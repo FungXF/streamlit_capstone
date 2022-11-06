@@ -63,11 +63,11 @@ with col21:
 with col22:
     rental = st.checkbox('Equipment Rental')
 with col23:
-    ''
+    activities = st.checkbox('Activities')
 with col24:
-    ''
+    mountain_views = st.checkbox('Mountain Views')
 with col25:
-    ''
+    food = st.checkbox('Food')
     
 if sightseeing:
     st.subheader('Activity needs to include Sightseeing:')
@@ -184,10 +184,25 @@ if rental:
     rentals = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
 else: 
     rentals = 0
+if activities:
+    st.subheader('Engaging in an activity:')
+    activity = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+else: 
+    activity = 0
+if mountain_views:
+    st.subheader('Having Mountain views:')
+    mount_views = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+else: 
+    mount_views = 0
+if food:
+    st.subheader('Food Must be included in the activity:')
+    foods = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+else: 
+    foods = 0
 
 values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature + accommodation + 
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
-          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental)
+          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
 # submit2 = st.button("I can't decide")
 
@@ -258,7 +273,7 @@ if submit:
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
            'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-           'rental': rentals}
+           'rental': rentals, 'activities': activity, 'mountain_views': mount_views, 'food': foods}
         
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
