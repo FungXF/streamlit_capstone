@@ -273,8 +273,8 @@ if submit:
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
            'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-           'rental': rentals, 'activities': activity, 'mountain_views': mount_views, 'food': foods}
-        
+           'rental': rentals, 'activities': activity, 'mountain views': mount_views, 'food': foods}
+                      
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
 
