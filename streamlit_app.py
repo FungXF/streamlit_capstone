@@ -218,32 +218,32 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 
 submit3 = st.button("DO NOT PRESS")
 
-if submit3:
+# if submit3:
 
-    # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
+#     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
 
-    def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+#     def add_bg_from_url():
+#     st.markdown(
+#          f"""
+#          <style>
+#          .stApp {{
+#              background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
+#              background-attachment: fixed;
+#              background-size: cover
+#          }}
+#          </style>
+#          """,
+#          unsafe_allow_html=True
+#      )
 
-    add_bg_from_url() 
+#     add_bg_from_url() 
     
     
-    st.markdown(   f"""   <style>
-       p {
-       background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
-       }
-       </style>   """,   unsafe_allow_html=True)
+#     st.markdown(   f"""   <style>
+#        p {
+#        background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
+#        }
+#        </style>   """,   unsafe_allow_html=True)
             
 submit = st.button('Show Recommendation')
 
