@@ -10,64 +10,64 @@ col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
 with col2:
-    land_tour = st.checkbox('Land Tour', help='Land Tour with Guide')
+    land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
 with col3:
-    air_tour = st.checkbox('Air Tour')
+    air_tour = st.checkbox('Air Tour', help='Tour in the Air with Guide')
 with col4:
-    sea_tour = st.checkbox('Sea Tour')
+    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
 with col5:
-    park = st.checkbox('Park')
+    park = st.checkbox('Park', help='Visiting Parks and Gardens')
 
 col6, col7, col8, col9, col10 = st.columns(5)
 
 with col6:
-    city = st.checkbox('Located In City')
+    city = st.checkbox('Located In City', help='Activities that takes place in the City')
 with col7:
-    nature = st.checkbox('Located In Nature')
+    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
 with col8:
-    accommodation = st.checkbox('Accommodation')
+    accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
 with col9:
-    camping = st.checkbox('Camping')
+    camping = st.checkbox('Camping', help='Activites that involves camping')
 with col10:
-    cruise = st.checkbox('Boat Tours')
+    cruise = st.checkbox('Boat Tours', help='E.g. Wildlife watching, river cruise, ferry to another island')
     
 col11, col12, col13, col14, col15 = st.columns(5)
 
 with col11:
-    island = st.checkbox('Island Hopping')   
+    island = st.checkbox('Island Hopping', help='Visiting an island')   
 with col12:
-    entertainment = st.checkbox('Entertainment')   
+    entertainment = st.checkbox('Entertainment', help='Live Entertainment')   
 with col13:
-    classes_and_workshops = st.checkbox('Classes and Workshop')
+    classes_and_workshops = st.checkbox('Classes and Workshop', help='Activities that involves an instructor')
 with col14:
-    transport = st.checkbox('Includes Transport')
+    transport = st.checkbox('Includes Transport', help='Transport from A to B, includes passes and hop-on/off tours')
 with col15:
-    experience = st.checkbox('Unique Experience')    
+    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')    
 
 col16, col17, col18, col19, col20 = st.columns(5)
 
 with col16:
-    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery')
+    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery', help='Visiting Brewery/Distillery/Winery')
 with col17:
-    photography = st.checkbox('Photoshoot')
+    photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
 with col18:
-    wildlife = st.checkbox('Wildlife Spotting')
+    wildlife = st.checkbox('Wildlife Spotting', help ='Spotting wildlife')
 with col19:
-    adventure = st.checkbox('Adventure')
+    adventure = st.checkbox('Adventure', help='Ziplining, Rafting, Snowshoeing and more')
 with col20:
-    beach = st.checkbox('Beach')
+    beach = st.checkbox('Beach', help='Visiting a beach')
 
 col21, col22,col23,col24,col25 = st.columns(5)
 with col21:
-    hiking = st.checkbox('Hiking')
+    hiking = st.checkbox('Hiking', help='Involves hiking')
 with col22:
-    rental = st.checkbox('Equipment Rental')
+    rental = st.checkbox('Equipment Rental', help='Only renting of equipment (snowboard, bicycle, boat, etc), no tours')
 with col23:
-    activities = st.checkbox('Activities')
+    activities = st.checkbox('Activities', help='Engaging in an activity')
 with col24:
-    mountain_views = st.checkbox('Mountain Views')
+    mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
 with col25:
-    food = st.checkbox('Food')
+    food = st.checkbox('Food', help='Food is included')
     
 if sightseeing:
     st.subheader('Activity needs to include Sightseeing:')
