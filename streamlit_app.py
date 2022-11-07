@@ -235,10 +235,11 @@ submit3 = st.button("DO NOT PRESS")
 
 if submit3:
     st.image(
-    "https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
+    "https://i.pinimg.com/originals/67/d8/52/67d8528785c341047020ce3356c73715.png",
     width=400, # Manually Adjust the width of the image as per requirement
     )
-    
+
+    # https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png
 # if submit3:
 
 #     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
