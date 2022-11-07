@@ -211,7 +211,8 @@ submit2 = st.button("Help me decide!")
 if submit2:
     api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
     api_route = '/random'
-
+    
+    profile = {'empty':'empty'}
     response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
     output = response.json()
     names = output['names']
