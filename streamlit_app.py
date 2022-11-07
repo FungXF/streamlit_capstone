@@ -233,10 +233,11 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 
 submit3 = st.button("DO NOT PRESS")
 
-st.image(
-"https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
-width=400, # Manually Adjust the width of the image as per requirement
-)
+if submit3:
+    st.image(
+    "https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
+    width=400, # Manually Adjust the width of the image as per requirement
+    )
     
 # if submit3:
 
