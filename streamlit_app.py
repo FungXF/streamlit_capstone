@@ -29,7 +29,7 @@ with col8:
 with col9:
     camping = st.checkbox('Camping', help='Activites that involves camping')
 with col10:
-    cruise = st.checkbox('Boat Tours', help='E.g. Wildlife watching, river cruise, ferry to another island')
+    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
     
 col11, col12, col13, col14, col15 = st.columns(5)
 
