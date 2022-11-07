@@ -291,7 +291,7 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
-https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600
+# https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600
 
 
 submit = st.button('Show Recommendation')
