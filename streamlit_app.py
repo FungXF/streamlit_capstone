@@ -296,17 +296,17 @@ if submit:
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
         # #     st.image(posters[0])
         with colres2:
-            st.markdown((' '.join(names[1].split('_'))).title())
+            st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
         # #     st.image(posters[1])
         with colres3:
-            st.markdown((' '.join(names[2].split('_'))).title())
+            st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
         # #     st.image(posters[2])
         colres4, colres5, colres6 = st.columns(3)
         with colres4:
-            st.markdown((' '.join(names[3].split('_'))).title())
+            st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
         # #     st.image(posters[3])
         with colres5:
-            st.markdown((' '.join(names[4].split('_'))).title())
+            st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
         # #     st.image(posters[4])
         with colres6:
-            st.markdown((' '.join(names[5].split('_'))).title())  
+            st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
