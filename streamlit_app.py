@@ -235,11 +235,11 @@ submit3 = st.button("DO NOT PRESS")
 
 if submit3:
     st.image(
-    "https://i.pinimg.com/originals/67/d8/52/67d8528785c341047020ce3356c73715.png",
+    "https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
     width=400, # Manually Adjust the width of the image as per requirement
     )
-
-    # https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png
+    
+    https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png
 # if submit3:
 
 #     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
@@ -272,7 +272,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
+             background-image: url("https://i.pinimg.com/originals/67/d8/52/67d8528785c341047020ce3356c73715.png");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -292,6 +292,8 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
+
+# https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600
 
 submit = st.button('Show Recommendation')
 
