@@ -279,7 +279,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://i0.wp.com/post.psychcentral.com/wp-content/uploads/sites/4/2022/05/airplane-flying-in-blue-sky-1296x728-header-1024x575.jpg?w=1155&h=1528");
+             background-image: url("https://content.skyscnr.com/m/7c93bc314e9c15c4/original/eyeem_71188514-jpg.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
