@@ -274,30 +274,30 @@ if submit2:
 #        }
 #        </style>   """,   unsafe_allow_html=True)
 
-# def add_bg_from_url():
-#     st.markdown(
-#          f"""
-#          <style>
-#          .stApp {{
-#              background-image: url("https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg");
-#              background-attachment: fixed;
-#              background-size: cover
-#          }}
-#          .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
-#              color: #C8C8C8;
-#          }}
-#          .css-18ni7ap{{
-#              background: #000;
-#          }}
-#          .css-1aqmucy svg {{
-#              stroke: #C8C8C8;
-#          }}
-#          </style>
-#          """,
-#          unsafe_allow_html=True
-#      )
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://i0.wp.com/post.psychcentral.com/wp-content/uploads/sites/4/2022/05/airplane-flying-in-blue-sky-1296x728-header-1024x575.jpg?w=1155&h=1528");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
+             color: #C8C8C8;
+         }}
+         .css-18ni7ap{{
+             background: #000;
+         }}
+         .css-1aqmucy svg {{
+             stroke: #C8C8C8;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-# add_bg_from_url() 
+add_bg_from_url() 
 
 # https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg
 #https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg
