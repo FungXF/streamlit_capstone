@@ -271,7 +271,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg");
+             background-image: url("https://i.ebayimg.com/images/g/zncAAOSw5DBiaQuz/s-l1600.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -291,6 +291,8 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
+#https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg
+# https://i.ebayimg.com/images/g/zncAAOSw5DBiaQuz/s-l1600.jpg
 # https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600
 
 
