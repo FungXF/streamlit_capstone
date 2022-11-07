@@ -186,17 +186,17 @@ else:
     rentals = 0
 if activities:
     st.subheader('Engaging in an activity:')
-    activity = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+    activity = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="23")
 else: 
     activity = 0
 if mountain_views:
     st.subheader('Having Mountain views:')
-    mount_views = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+    mount_views = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="24")
 else: 
     mount_views = 0
 if food:
     st.subheader('Food Must be included in the activity:')
-    foods = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="22")
+    foods = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="25")
 else: 
     foods = 0
 
@@ -233,6 +233,11 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 
 submit3 = st.button("DO NOT PRESS")
 
+    st.image(
+    "https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
+    width=400, # Manually Adjust the width of the image as per requirement
+    )
+    
 # if submit3:
 
 #     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
@@ -279,14 +284,15 @@ if submit:
         api_route = '/predict'
 
         response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
-        names = response.json()
-        names = names['names']
+        output = response.json()
+        names = output['names']
+        url = output['url']
         
         #display with the columns
         colres1, colres2, colres3 = st.columns(3)
         # col1 = st.columns(1)
         with colres1:
-            st.markdown((' '.join(names[0].split('_'))).title())
+            st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
         # #     st.image(posters[0])
         with colres2:
             st.markdown((' '.join(names[1].split('_'))).title())
