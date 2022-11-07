@@ -4,7 +4,7 @@ import json
 
 #original_title = '<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>'
 st.markdown('<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
-st.markdown('<p style="font-family:helvetica; color:Black; font-size: 30px;"><b>Welcome, in this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
+st.markdown('<p style="font-family:helvetica; color:Black; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
 
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -27,7 +27,7 @@ with col6:
 with col7:
     nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
 with col8:
-    accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
+    food = st.checkbox('Food', help='Food is included')
 with col9:
     camping = st.checkbox('Camping', help='Activites that involves camping')
 with col10:
@@ -69,7 +69,7 @@ with col23:
 with col24:
     mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
 with col25:
-    food = st.checkbox('Food', help='Food is included')
+    accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
     
 if sightseeing:
     st.subheader('Activity needs to include Sightseeing:')
@@ -206,32 +206,37 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
-# submit2 = st.button("I can't decide")
+submit2 = st.button("Help me decide!")
 
-# if submit2:
-#     user_input = 
-#     namess = []
-#     namess = random.choices(attractions['name'], k=6)
-#         #display with the columns
-#     colrand1, colrand2, colrand3 = st.columns(3)
-#     with colrand1:
-#         st.markdown((' '.join(namess[0].split('_'))).title())
-#     #     st.image(posters[0])
-#     with colrand2:
-#         st.markdown((' '.join(namess[1].split('_'))).title())
-#     # #     st.image(posters[1])
-#     with colrand3:
-#         st.markdown((' '.join(namess[2].split('_'))).title())
-#     # #     st.image(posters[2])
-#     colrand4, colrand5, colrand6 = st.columns(3)
-#     with colrand4:
-#         st.markdown((' '.join(namess[3].split('_'))).title())
-#     # #     st.image(posters[3])
-#     with colrand5:
-#         st.markdown((' '.join(namess[4].split('_'))).title())
-#     # #     st.image(posters[4])
-#     with colrand6:
-#         st.markdown((' '.join(namess[5].split('_'))).title())   
+if submit2:
+    api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
+    api_route = '/random'
+
+    response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
+    output = response.json()
+    names = output['names']
+    url = output['url']
+    
+        #display with the columns
+    colrand1, colrand2, colrand3 = st.columns(3)
+    with colrand1:
+        st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
+    #     st.image(posters[0])
+    with colrand2:
+        st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
+    # #     st.image(posters[1])
+    with colrand3:
+        st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
+    # #     st.image(posters[2])
+    colrand4, colrand5, colrand6 = st.columns(3)
+    with colrand4:
+        st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
+    # #     st.image(posters[3])
+    with colrand5:
+        st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
+    # #     st.image(posters[4])
+    with colrand6:
+        st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5]) 
 
 # submit3 = st.button("DO NOT PRESS")
 
