@@ -8,9 +8,9 @@ st.subheader('Welcome, in this travel recommender, select the top 5 categories y
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    sightseeing = st.checkbox('Sightseeing')
+    sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
 with col2:
-    land_tour = st.checkbox('Land Tour')
+    land_tour = st.checkbox('Land Tour', help='Land Tour with Guide')
 with col3:
     air_tour = st.checkbox('Air Tour')
 with col4:
