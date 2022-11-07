@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 import json
 
-original_title = '<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>'
-st.markdown(original_title, unsafe_allow_html=True )
+#original_title = '<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>'
+st.markdown('<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True )
 st.subheader('Welcome, in this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!')
 
 col1, col2, col3, col4, col5 = st.columns(5)
