@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-original_title = '<p style="font-family:Courier; color:Black; font-size: 20px;">Travel Recommender System</p>'
+original_title = '<p style="font-family:Courier; color:Black; font-size: 50px;">Travel Recommender System</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 st.subheader('Welcome, in this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!')
 
@@ -267,30 +267,30 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
 #        }
 #        </style>   """,   unsafe_allow_html=True)
 
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
-             color: #C8C8C8;
-         }}
-         .css-18ni7ap{{
-             background: #000;
-         }}
-         .css-1aqmucy svg {{
-             stroke: #C8C8C8;
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+# def add_bg_from_url():
+#     st.markdown(
+#          f"""
+#          <style>
+#          .stApp {{
+#              background-image: url("https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg");
+#              background-attachment: fixed;
+#              background-size: cover
+#          }}
+#          .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
+#              color: #C8C8C8;
+#          }}
+#          .css-18ni7ap{{
+#              background: #000;
+#          }}
+#          .css-1aqmucy svg {{
+#              stroke: #C8C8C8;
+#          }}
+#          </style>
+#          """,
+#          unsafe_allow_html=True
+#      )
 
-add_bg_from_url() 
+# add_bg_from_url() 
 
 # https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg
 #https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg
