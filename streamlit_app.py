@@ -265,7 +265,33 @@ if submit3:
 #        background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
 #        }
 #        </style>   """,   unsafe_allow_html=True)
-            
+
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
+             color: #C8C8C8;
+         }}
+         .css-18ni7ap{{
+             background: #000;
+         }}
+         .css-1aqmucy svg {{
+             stroke: #C8C8C8;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
+
+
 submit = st.button('Show Recommendation')
 
 if submit:
