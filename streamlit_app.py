@@ -74,7 +74,7 @@ with col25:
     
 if sightseeing:
     st.markdown('<p style="font-family:helvetica; color:White; font-size: 25px;"><b>Activity needs to include Sightseeing:</b></p>', unsafe_allow_html=True)
-    sight = st.slider.markdown('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="1")
+    sight = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="1")
 else: 
     sight = 0
 if land_tour:
