@@ -73,7 +73,7 @@ with col25:
     accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
     
 if sightseeing:
-    st.subheader('Activity needs to include Sightseeing:')
+    st.markdown('<p style="font-family:helvetica; color:White; font-size: 20px;"><b>Activity needs to include Sightseeing</b></p>', unsafe_allow_html=True)
     sight = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="1")
 else: 
     sight = 0
