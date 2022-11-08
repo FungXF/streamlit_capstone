@@ -219,30 +219,30 @@ if submit2:
     colrand1, colrand2, = st.columns(2)
 
     with colrand1:
-        st.image((output['image'][0]),width=400,)
+        st.image((output['image'][0]),width=300,)
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
     with colrand2:
-        st.image((output['image'][1]),width=400,)
+        st.image((output['image'][1]),width=300,)
         st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
 
     colrand3, colrand4 = st.columns(2)
     with colrand3:
-        st.image((output['image'][2]),width=400,)
+        st.image((output['image'][2]),width=300,)
         st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
 
     with colrand4:
-        st.image((output['image'][3]),width=400,)
+        st.image((output['image'][3]),width=300,)
         st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
 
     colrand5, colrand6 = st.columns(2)
 
     with colrand5:
-        st.image((output['image'][4]),width=400,)
+        st.image((output['image'][4]),width=300,)
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
 
     with colrand6:
-        st.image((output['image'][5]),width=400,)
+        st.image((output['image'][5]),width=300,)
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
 # submit3 = st.button("DO NOT PRESS")
@@ -339,28 +339,28 @@ if submit:
         colres1, colres2, = st.columns(2)
 
         with colres1:
-            st.image((output['image'][0]),width=400,)
+            st.image((output['image'][0]),width=300,)
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
         with colres2:
-            st.image((output['image'][1]),width=400,)
+            st.image((output['image'][1]),width=300,)
             st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
         
         colres3, colres4 = st.columns(2)
         with colres3:
-            st.image((output['image'][2]),width=400,)
+            st.image((output['image'][2]),width=300,)
             st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
         
         with colres4:
-            st.image((output['image'][3]),width=400,)
+            st.image((output['image'][3]),width=300,)
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
         
         colres5, colres6 = st.columns(2)
 
         with colres5:
-            st.image((output['image'][4]),width=400,)
+            st.image((output['image'][4]),width=300,)
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
 
         with colres6:
-            st.image((output['image'][5]),width=400,)
+            st.image((output['image'][5]),width=300,)
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
