@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import json
+from PIL import Image
 
 #original_title = '<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>'
 st.markdown('<p style="font-family:helvetica; color:White; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
@@ -212,6 +213,7 @@ if submit2:
     output = response.json()
     names = output['names']
     url = output['url']
+    image = output['image']    
     
         #display with the columns
     colrand1, colrand2, colrand3 = st.columns(3)
@@ -232,6 +234,9 @@ if submit2:
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
     # #     st.image(posters[4])
     with colrand6:
+        st.image(output['image'][5],
+            width=400, # Manually Adjust the width of the image as per requirement
+        )
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5]) 
 
 # submit3 = st.button("DO NOT PRESS")
@@ -322,6 +327,7 @@ if submit:
         output = response.json()
         names = output['names']
         url = output['url']
+        image = output['image']
         
         #display with the columns
         colres1, colres2, colres3 = st.columns(3)
@@ -343,4 +349,8 @@ if submit:
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
         # #     st.image(posters[4])
         with colres6:
+            st.image(
+                "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg",
+                width=400, # Manually Adjust the width of the image as per requirement
+            )
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
