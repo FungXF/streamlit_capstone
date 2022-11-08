@@ -349,8 +349,8 @@ if submit:
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
         # #     st.image(posters[4])
         with colres6:
-            st.image(
-                "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg",
+            st.image((
+                output['image'][5]),
                 width=400, # Manually Adjust the width of the image as per requirement
             )
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
