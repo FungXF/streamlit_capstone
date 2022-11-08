@@ -218,25 +218,28 @@ if submit2:
         #display with the columns
     colrand1, colrand2, colrand3 = st.columns(3)
     with colrand1:
+        st.image((output['image'][0]),width=400,)
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-    #     st.image(posters[0])
+
     with colrand2:
+        st.image((output['image'][1]),width=400,)
         st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
-    # #     st.image(posters[1])
+
     with colrand3:
+        st.image((output['image'][2]),width=400,)
         st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
-    # #     st.image(posters[2])
+
     colrand4, colrand5, colrand6 = st.columns(3)
     with colrand4:
+        st.image((output['image'][3]),width=400,)
         st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
-    # #     st.image(posters[3])
+
     with colrand5:
+        st.image((output['image'][4]),width=400,)
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
-    # #     st.image(posters[4])
+        
     with colrand6:
-        st.image(output['image'][5],
-            width=400, # Manually Adjust the width of the image as per requirement
-        )
+        st.image((output['image'][5]),width=400,)
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5]) 
 
 # submit3 = st.button("DO NOT PRESS")
@@ -331,26 +334,28 @@ if submit:
         
         #display with the columns
         colres1, colres2, colres3 = st.columns(3)
-        # col1 = st.columns(1)
+
         with colres1:
+            st.image((output['image'][0]),width=400,)
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-        # #     st.image(posters[0])
+
         with colres2:
+            st.image((output['image'][1]),width=400,)
             st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
-        # #     st.image(posters[1])
+
         with colres3:
+            st.image((output['image'][2]),width=400,)
             st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
-        # #     st.image(posters[2])
+
         colres4, colres5, colres6 = st.columns(3)
         with colres4:
+            st.image((output['image'][3]),width=400,)
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
-        # #     st.image(posters[3])
+
         with colres5:
+            st.image((output['image'][4]),width=400,)
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
-        # #     st.image(posters[4])
+
         with colres6:
-            st.image((
-                output['image'][5]),
-                width=400, # Manually Adjust the width of the image as per requirement
-            )
+            st.image((output['image'][5]),width=400,)
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
