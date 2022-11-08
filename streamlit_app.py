@@ -149,13 +149,8 @@ else:
 if brew_dis_win:
     st.subheader('Activity needs to include brewery/distillery/winery:')
     brewery_distillery_winery = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="16")
-    brewery = brewery_distillery_winery/3
-    distillery = brewery_distillery_winery/3
-    winery = brewery_distillery_winery/3
 else: 
-    brewery = 0
-    distillery = 0
-    winery = 0
+    brewery_distillery_winery = 0
 if photography:
     st.subheader('Activity needs to include photoshoots:')
     photo = st.slider('On a scale of 1(Its ok to have) to 5(Must Have)', 1,5,3, key="17")
@@ -316,7 +311,7 @@ if submit:
            'park': parks, 'city': in_city, 'nature': nat, 'accommodation': accom,
            'camping': camp, 'cruise': crui, 'island': islands, 'entertainment': enter, 
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
-           'brewery': brewery, 'distillery': distillery, 'winery': winery, 'photography': photo,
+           'brewery/winery/distillery': brewery_distillery_winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
            'rental': rentals, 'activities': activity, 'mountain views': mount_views, 'food': foods}
                       
