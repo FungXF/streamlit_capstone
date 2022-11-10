@@ -341,7 +341,7 @@ if submit:
 
         with colres1:
             st.image((image[0]),width=300,)
-            st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
+            st.markdown(f"[{(' '.join(names[0].split('_'))).title()}])
 
         with colres2:
             st.image((image[1]),width=300,)
