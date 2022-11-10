@@ -367,15 +367,16 @@ if submit:
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
             
+# background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80");
+# background-attachment: fixed;
+# background-size: cover;
             
 def add_bg_from_url():
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80");
-             background-attachment: fixed;
-             background-size: cover
+         background-color: #ADD8E6;
          }}
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
