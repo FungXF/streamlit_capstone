@@ -377,8 +377,8 @@ def add_bg_from_url():
              background-attachment: fixed;
              background-size: cover
          }}
-         a {{
-             color: #f65282;
+         .css-1aqmucy svg {{
+             stroke: rgb(49, 51, 63);
          }}
 
          a:hover {{
