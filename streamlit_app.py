@@ -3,9 +3,9 @@ import requests
 import json
 from PIL import Image
 
-#original_title = '<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>'
-st.markdown('<p style="font-family:helvetica; color:Black; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
-st.markdown('<p style="font-family:helvetica; color:Black; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
+#original_title = '<p style="font-family:helvetica; color:#039BE5; font-size: 50px;"><b>Travel Recommender System</b></p>'
+st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
+st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
 
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -73,152 +73,152 @@ with col25:
     accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
     
 if sightseeing:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Sightseeing:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Sightseeing:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     sight = st.slider('',1,5,3, key="1", label_visibility = "collapsed")
 else: 
     sight = 0
 if land_tour:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Tour by Land:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Tour by Land:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     land_t = st.slider('',1,5,3, key="2", label_visibility = "collapsed")
 else: 
     land_t = 0
 if air_tour:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Tour in Air:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Tour in Air:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     air_t = st.slider('',1,5,3, key="3", label_visibility = "collapsed")
 else: 
     air_t = 0
 if sea_tour:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Tour of Sea:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Tour of Sea:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     sea_t = st.slider('',1,5,3, key="4", label_visibility = "collapsed")
 else: 
     sea_t = 0
 if park:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include visiting Park/Garden:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include visiting Park/Garden:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     parks = st.slider('',1,5,3, key="5", label_visibility = "collapsed")
 else: 
     parks = 0
 if city:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to be in the city:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to be in the city:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     in_city = st.slider('',1,5,3, key="6", label_visibility = "collapsed")
 else: 
     in_city = 0
 if nature:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include being in nature:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include being in nature:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     nat = st.slider('',1,5,3, key="7", label_visibility = "collapsed")
 else: 
     nat = 0
 if accommodation:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Accommodation:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Accommodation:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     accom = st.slider('',1,5,3, key="8", label_visibility = "collapsed")
 else: 
     accom = 0
 if camping:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Camping:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Camping:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     camp = st.slider('',1,5,3, key="9", label_visibility = "collapsed")
 else: 
     camp = 0
 if cruise:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Boat Tour:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Boat Tour:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     crui = st.slider('',1,5,3, key="10", label_visibility = "collapsed")
 else: 
     crui = 0
 if island:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include being on island:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include being on island:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     islands = st.slider('',1,5,3, key="11", label_visibility = "collapsed")
 else: 
     islands = 0
 if entertainment:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include entertainment:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include entertainment:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     enter = st.slider('',1,5,3, key="12", label_visibility = "collapsed")
 else: 
     enter = 0
 if classes_and_workshops:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include classes and workshops:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include classes and workshops:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     class_work = st.slider('',1,5,3, key="13", label_visibility = "collapsed")
 else: 
     class_work = 0
 if transport:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include Transport:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include Transport:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     trans = st.slider('',1,5,3, key="14", label_visibility = "collapsed")
 else: 
     trans = 0
 if experience:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include a unique experience:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include a unique experience:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     exp = st.slider('',1,5,3, key="15", label_visibility = "collapsed")
 else: 
     exp = 0
 if brew_dis_win:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include brewery/distillery/winery:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include brewery/distillery/winery:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     brewery_distillery_winery = st.slider('',1,5,3, key="16", label_visibility = "collapsed")
 else: 
     brewery_distillery_winery = 0
 if photography:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include photoshoots:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include photoshoots:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     photo = st.slider('',1,5,3, key="17", label_visibility = "collapsed")
 else: 
     photo = 0
 if wildlife:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include observing wildlife:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include observing wildlife:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     wild = st.slider('',1,5,3, key="18", label_visibility = "collapsed")
 else: 
     wild = 0
 if adventure:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to be adventurous:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to be adventurous:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     advent = st.slider('',1,5,3, key="19", label_visibility = "collapsed")
 else: 
     advent = 0
 if beach:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include visting a beach:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include visting a beach:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     beaches = st.slider('',1,5,3, key="20", label_visibility = "collapsed")
 else: 
     beaches = 0
 if hiking:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Activity needs to include hiking:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Activity needs to include hiking:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     hike = st.slider('',1,5,3, key="21", label_visibility = "collapsed")
 else: 
     hike = 0
 if rental:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Renting of an equipment:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Renting of an equipment:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     rentals = st.slider('',1,5,3, key="22", label_visibility = "collapsed")
 else: 
     rentals = 0
 if activities:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Engaging in an activity:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Engaging in an activity:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     activity = st.slider('',1,5,3, key="23", label_visibility = "collapsed")
 else: 
     activity = 0
 if mountain_views:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Having Mountain views:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Having Mountain views:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     mount_views = st.slider('',1,5,3, key="24", label_visibility = "collapsed")
 else: 
     mount_views = 0
 if food:
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 25px;"><b>Food Must be included in the activity:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:Black; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 25px;"><b>Food Must be included in the activity:</b></p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:helvetica; color:#039BE5; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
     foods = st.slider('',1,5,3, key="25", label_visibility = "collapsed")
 else: 
     foods = 0
