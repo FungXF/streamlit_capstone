@@ -305,30 +305,6 @@ if submit2:
 #        }
 #        </style>   """,   unsafe_allow_html=True)
 
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         .h1, .h2, .p, .css-k3w14i, .css-10trblm, .css-81oif8, .css-dg4u6x, .css-rvekum p, .css-1offfwp p{{
-             color: #C8C8C8;
-         }}
-         .css-18ni7ap{{
-             background: #000;
-         }}
-         .css-1aqmucy svg {{
-             stroke: #C8C8C8;
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
-
-add_bg_from_url() 
 
 # https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg
 #https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg
@@ -389,3 +365,28 @@ if submit:
         with colres6:
             st.image((image[5]),width=300,)
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
+
+            
+            
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         a {{
+             color: #f65282;
+         }}
+
+         a:hover {{
+             color: #ffc4c0;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
