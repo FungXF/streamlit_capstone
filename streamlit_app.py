@@ -381,13 +381,13 @@ def add_bg_from_url():
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
          }}
-
-         a:hover {{
-             color: #ffc4c0;
-         }}
          </style>
          """,
          unsafe_allow_html=True
      )
 
 add_bg_from_url() 
+
+
+# a:hover {{
+# color: #ffc4c0;
