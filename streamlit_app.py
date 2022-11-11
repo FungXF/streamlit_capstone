@@ -74,7 +74,7 @@ with col25:
     wildlife = st.checkbox('Wildlife Spotting', help ='Spotting wildlife')
     
 if sightseeing:
-    st.markdown('Activity needs to include Sightseeing:')
+    st.subheader('Activity needs to include Sightseeing:')
     sight = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="1")
 else: 
     sight = 0
