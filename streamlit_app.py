@@ -252,7 +252,7 @@ if submit2:
     colrand1, colrand2, = st.columns(2)
 
     with colrand1:
-        st.image((output['image'][0]), width=1000%)
+        st.image((output['image'][0]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
     with colrand2:
