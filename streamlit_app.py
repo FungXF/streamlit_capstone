@@ -7,8 +7,7 @@ from PIL import Image
 st.set_page_config(layout="wide")
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
-st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))")
-st.markdown("By: Fung Xue Feng ([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
+st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -229,18 +228,12 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
-button1, button2, na1, na2, na3, na4 = st.columns(6)
+button1, button2, na1, na2, na3 = st.columns(5)
 with button1:
     submit = st.button('Show Recommendation')    
 with button2:
     submit2 = st.button("Help me decide!")
-# with na1:
-    
-# with na2:
-    
-# with na3:
-    
-# with na4:
+
     
     
 # Randomizer if they cannot decide on the type of activites
@@ -259,7 +252,7 @@ if submit2:
     colrand1, colrand2, = st.columns(2)
 
     with colrand1:
-        st.image((output['image'][0]))
+        st.image((output['image'][0]), width=1000%)
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
     with colrand2:
