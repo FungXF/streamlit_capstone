@@ -345,6 +345,7 @@ def add_bg_from_url():
          .css-81oif8, .css-10y5sf6, .css-1inwz65 {{
              font-size: 15px;
              font-weight: bold;
+             color:#5A5A5A;
          </style>
          """,
          unsafe_allow_html=True
