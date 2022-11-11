@@ -119,7 +119,7 @@ if camping:
 else: 
     camp = 0
 if cruise:
-    st.markdown('Activity needs to include Boat Tour:)
+    st.markdown('Activity needs to include Boat Tour:')
     crui = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="10")
 else: 
     crui = 0
