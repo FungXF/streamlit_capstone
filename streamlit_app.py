@@ -234,10 +234,13 @@ with button1:
     submit = st.button('Show Recommendation')    
 with button2:
     submit2 = st.button("Help me decide!")
-with na1:
-with na2:
-with na3:
-with na4:
+# with na1:
+    
+# with na2:
+    
+# with na3:
+    
+# with na4:
     
     
 # Randomizer if they cannot decide on the type of activites
