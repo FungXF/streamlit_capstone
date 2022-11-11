@@ -79,7 +79,7 @@ if sightseeing:
 else: 
     sight = 0
 if land_tour:
-    st.markdown('Activity needs to include Tour by Land:)
+    st.markdown('Activity needs to include Tour by Land:')
     land_t = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="2")
 else: 
     land_t = 0
