@@ -90,7 +90,7 @@ else:
     air_t = 0
 if sea_tour:
     st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 25px;"><b>Activity needs to include Tour of Sea:</b></p>', unsafe_allow_html=True)
-    sea_t = sst.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="4")
+    sea_t = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="4")
 else: 
     sea_t = 0
 if park:
@@ -231,26 +231,26 @@ if submit2:
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
     with colrand2:
-        st.image((output['image'][1]),width=300,)
+        st.image((output['image'][1]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
 
     colrand3, colrand4 = st.columns(2)
     with colrand3:
-        st.image((output['image'][2]),width=300,)
+        st.image((output['image'][2]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
 
     with colrand4:
-        st.image((output['image'][3]),width=300,)
+        st.image((output['image'][3]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
 
     colrand5, colrand6 = st.columns(2)
 
     with colrand5:
-        st.image((output['image'][4]),width=300,)
+        st.image((output['image'][4]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
 
     with colrand6:
-        st.image((output['image'][5]),width=300,)
+        st.image((output['image'][5]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
 # After selecting the 5 categories of activites, the recommender would then pull out the top 6 recommended activites
@@ -280,30 +280,30 @@ if submit:
         colres1, colres2, = st.columns(2)
 
         with colres1:
-            st.image((image[0]),width=300,)
+            st.image((image[0]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}]")
 
         with colres2:
-            st.image((image[1]),width=300,)
+            st.image((image[1]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
         
         colres3, colres4 = st.columns(2)
         with colres3:
-            st.image((image[2]),width=300,)
+            st.image((image[2]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
         
         with colres4:
-            st.image((image[3]),width=300,)
+            st.image((image[3]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
         
         colres5, colres6 = st.columns(2)
 
         with colres5:
-            st.image((image[4]),width=300,)
+            st.image((image[4]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
 
         with colres6:
-            st.image((image[5]),width=300,)
+            st.image((image[5]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
 # Changing the background and words styling and colours                       
@@ -316,6 +316,11 @@ def add_bg_from_url():
          }}
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
+         }}
+         .css-1offfwp p {{
+             font-size: 28px;
+             font-weight: bold;
+             color:#5A5A5A;         
          }}
          .css-81oif8, .css-10y5sf6, .css-1inwz65 {{
              font-size: 17px;
