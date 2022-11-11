@@ -229,12 +229,17 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
-button1, button2 = st.columns(2)
+button1, button2, na1, na2, na3, na4 = st.columns(6)
 with button1:
     submit = st.button('Show Recommendation')    
 with button2:
     submit2 = st.button("Help me decide!")
-
+with na1:
+with na2:
+with na3:
+with na4:
+    
+    
 # Randomizer if they cannot decide on the type of activites
 if submit2:
     api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
