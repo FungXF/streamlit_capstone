@@ -3,10 +3,12 @@ import requests
 import json
 from PIL import Image
 
-#original_title = '<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Travel Recommender System</b></p>'
+
+st.set_page_config(layout="wide")
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
-
+st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))")
+st.markdown("By: Fung Xue Feng ([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -227,8 +229,13 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
-submit2 = st.button("Help me decide!")
+button1, button2 = st.columns(2)
+with button1:
+    submit = st.button('Show Recommendation')    
+with button2:
+    submit2 = st.button("Help me decide!")
 
+# Randomizer if they cannot decide on the type of activites
 if submit2:
     api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
     api_route = '/random'
@@ -240,7 +247,7 @@ if submit2:
     url = output['url']
     image = output['image']    
     
-        #display with the columns
+    #display with the columns
     colrand1, colrand2, = st.columns(2)
 
     with colrand1:
@@ -270,50 +277,7 @@ if submit2:
         st.image((output['image'][5]),width=300,)
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
-# submit3 = st.button("DO NOT PRESS")
-
-# if submit3:
-#     st.image(
-#     "https://i.postimg.cc/k5W6txRc/Screenshot-2022-10-13-145818-removebg-preview.png",
-#     width=400, # Manually Adjust the width of the image as per requirement
-#     )
-    
-# if submit3:
-
-#     # https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link
-
-#     def add_bg_from_url():
-#     st.markdown(
-#          f"""
-#          <style>
-#          .stApp {{
-#              background-image: url("https://drive.google.com/file/d/1EtUyVygCCtpMSCEE-EV615u53fi8dGOW/view?usp=share_link");
-#              background-attachment: fixed;
-#              background-size: cover
-#          }}
-#          </style>
-#          """,
-#          unsafe_allow_html=True
-#      )
-
-#     add_bg_from_url() 
-    
-    
-#     st.markdown(   f"""   <style>
-#        p {
-#        background-image: url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600");
-#        }
-#        </style>   """,   unsafe_allow_html=True)
-
-
-# https://i.etsystatic.com/10250157/r/il/4c1bc8/3733438535/il_1080xN.3733438535_f6tl.jpg
-#https://iphoneswallpapers.com/wp-content/uploads/2021/10/World-Map-iPhone-Wallpaper.jpg
-# https://i.ebayimg.com/images/g/zncAAOSw5DBiaQuz/s-l1600.jpg
-# https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=1600
-
-
-submit = st.button('Show Recommendation')
-
+# After selecting the 5 categories of activites, the recommender would then pull out the top 6 recommended activites
 if submit:
     if values != 5:
         st.error("**Choose exactly 5 options!**")
@@ -330,7 +294,7 @@ if submit:
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
 
-        response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) # json.dumps() converts dict to JSON
+        response = requests.post(f'{api_url}{api_route}', json=json.dumps(profile)) 
         output = response.json()
         names = output['names']
         url = output['url']
@@ -366,11 +330,7 @@ if submit:
             st.image((image[5]),width=300,)
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
 
-            
-# background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80");
-# background-attachment: fixed;
-# background-size: cover;
-            
+# Changing the background and words styling and colours                       
 def add_bg_from_url():
     st.markdown(
          f"""
@@ -387,7 +347,3 @@ def add_bg_from_url():
      )
 
 add_bg_from_url() 
-
-
-# a:hover {{
-# color: #ffc4c0;
