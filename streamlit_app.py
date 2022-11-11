@@ -342,6 +342,9 @@ def add_bg_from_url():
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
          }}
+         .css-81oif8, .css-10y5sf6, .css-1inwz65 {{
+             font-size: 15px;
+             font-weight: bold;
          </style>
          """,
          unsafe_allow_html=True
