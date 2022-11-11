@@ -194,7 +194,7 @@ if mountain_views:
 else: 
     mount_views = 0
 if food:
-    st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 25px;"><b>Food Must be included in the activity:</b></p>', unsafe_allow_html=True)
+    st.markdown('Food Must be included in the activity:')
     foods = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="25")
 else: 
     foods = 0
