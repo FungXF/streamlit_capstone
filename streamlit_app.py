@@ -6,72 +6,72 @@ from PIL import Image
 
 st.set_page_config(layout="wide")
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
-st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity in overseas!</b></p>', unsafe_allow_html=True)
+st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
+    accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
 with col2:
-    land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
+    activities = st.checkbox('Activities', help='Engaging in an activity')
 with col3:
-    air_tour = st.checkbox('Air Tour', help='Tour in the Air with Guide')
+    adventure = st.checkbox('Adventure', help='Ziplining, Rafting, Snowshoeing and more')
 with col4:
-    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
+    air_tour = st.checkbox('Air Tour', help='Tour in the Air with Guide')
 with col5:
-    park = st.checkbox('Park', help='Visiting Parks and Gardens')
+    beach = st.checkbox('Beach', help='Visiting a beach')
+
 
 col6, col7, col8, col9, col10 = st.columns(5)
-
 with col6:
-    city = st.checkbox('Located In City', help='Activities that takes place in the City')
+    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery', help='Visiting Brewery/Distillery/Winery')
 with col7:
-    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
-with col8:
-    food = st.checkbox('Food', help='Food is included')
-with col9:
     camping = st.checkbox('Camping', help='Activites that involves camping')
+with col8:
+    classes_and_workshops = st.checkbox('Classes and Workshop', help='Activities that involves an instructor')
+with col9:
+    entertainment = st.checkbox('Entertainment', help='Live Entertainment')
 with col10:
-    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
+    rental = st.checkbox('Equipment Rental', help='Only renting of equipment (snowboard, bicycle, boat, etc), no tours')
+
     
 col11, col12, col13, col14, col15 = st.columns(5)
-
 with col11:
-    island = st.checkbox('Island Hopping', help='Visiting an island')   
+    food = st.checkbox('Food', help='Food is included')
 with col12:
-    entertainment = st.checkbox('Entertainment', help='Live Entertainment')   
+    hiking = st.checkbox('Hiking', help='Involves hiking')   
 with col13:
-    classes_and_workshops = st.checkbox('Classes and Workshop', help='Activities that involves an instructor')
-with col14:
     transport = st.checkbox('Includes Transport', help='Transport from A to B, includes passes and hop-on/off tours')
+with col14:
+    island = st.checkbox('Island Hopping', help='Visiting an island')    
 with col15:
-    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')    
+    land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
+
 
 col16, col17, col18, col19, col20 = st.columns(5)
-
 with col16:
-    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery', help='Visiting Brewery/Distillery/Winery')
+    city = st.checkbox('Located In City', help='Activities that takes place in the City')
 with col17:
-    photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
+    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
 with col18:
-    wildlife = st.checkbox('Wildlife Spotting', help ='Spotting wildlife')
+    mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
 with col19:
-    adventure = st.checkbox('Adventure', help='Ziplining, Rafting, Snowshoeing and more')
+    park = st.checkbox('Park', help='Visiting Parks and Gardens')
 with col20:
-    beach = st.checkbox('Beach', help='Visiting a beach')
+    photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
 
 col21, col22,col23,col24,col25 = st.columns(5)
 with col21:
-    hiking = st.checkbox('Hiking', help='Involves hiking')
+    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
 with col22:
-    rental = st.checkbox('Equipment Rental', help='Only renting of equipment (snowboard, bicycle, boat, etc), no tours')
+    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
 with col23:
-    activities = st.checkbox('Activities', help='Engaging in an activity')
+    sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
 with col24:
-    mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
+    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')    
 with col25:
-    accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
+    wildlife = st.checkbox('Wildlife Spotting', help ='Spotting wildlife')
     
 if sightseeing:
     st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 25px;"><b>Activity needs to include Sightseeing:</b></p>', unsafe_allow_html=True)
@@ -219,8 +219,8 @@ else:
     mount_views = 0
 if food:
     st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 25px;"><b>Food Must be included in the activity:</b></p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
-    foods = st.slider('',1,5,3, key="25", label_visibility = "collapsed")
+    # st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 15px;"><b>On a scale of 1(Its ok to have) to 5(Must Have)</b></p>', unsafe_allow_html=True)
+    foods = st.slider('On a scale of 1(Its ok to have) to 5 (Must Have)',1,5,3, key="25")
 else: 
     foods = 0
 
@@ -228,11 +228,11 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
 
-button1, button2, na1, na2, na3 = st.columns(5)
-with button1:
-    submit = st.button('Show Recommendation')    
-with button2:
-    submit2 = st.button("Help me decide!")
+# button1, button2, na1, na2, na3 = st.columns(5)
+# with button1:
+submit = st.button('Show Recommendation')    
+# with button2:
+submit2 = st.button("Help me decide!")
 
     
     
