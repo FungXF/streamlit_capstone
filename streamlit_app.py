@@ -317,7 +317,7 @@ def add_bg_from_url():
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
          }}
-         .css-10trblm span {{
+         .css-10trblm .e16nr0p30 span{{
              font-size: 28px;
              font-weight: bold;
              color:#5A5A5A;  
