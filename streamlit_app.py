@@ -69,7 +69,7 @@ with col21:
 with col22:
     experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')
 with col23:
-    wildlife = st.checkbox('Wildlife Spotting', help ='Sealife spotting, Bird Watching')
+    wildlife = st.checkbox('Wildlife Spotting', help ='Sealife spotting, Bird Watching, etc..')
 
     
 if sightseeing:
