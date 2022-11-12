@@ -3,9 +3,8 @@ import requests
 import json
 from PIL import Image
 
-
 st.set_page_config(layout="wide")
-st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Travel Recommender System</b></p>', unsafe_allow_html=True)
+st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Wondering what to do during your holiday?</b></p>', unsafe_allow_html=True)
 st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
@@ -14,64 +13,61 @@ col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     accommodation = st.checkbox('Accommodation', help='Activites that include accommodation')
 with col2:
-    activities = st.checkbox('Activities', help='Engaging in an activity')
-with col3:
     adventure = st.checkbox('Adventure', help='Ziplining, Rafting, Snowshoeing and more')
-with col4:
+with col3:
     air_tour = st.checkbox('Air Tour', help='Tour in the Air with Guide')
-with col5:
+with col4:
     beach = st.checkbox('Beach', help='Visiting a beach')
+with col5:
+    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery', help='Visiting Brewery/Distillery/Winery')
 
 
 col6, col7, col8, col9, col10 = st.columns(5)
 with col6:
-    brew_dis_win = st.checkbox('Brewery/ Distillery/ Winery', help='Visiting Brewery/Distillery/Winery')
-with col7:
     camping = st.checkbox('Camping', help='Activites that involves camping')
-with col8:
+with col7:
     classes_and_workshops = st.checkbox('Classes and Workshop', help='Activities that involves an instructor')
-with col9:
+with col8:
     entertainment = st.checkbox('Entertainment', help='Live Entertainment')
-with col10:
+with col9:
     rental = st.checkbox('Equipment Rental', help='Only renting of equipment (snowboard, bicycle, boat, etc), no tours')
+with col10:
+    hiking = st.checkbox('Hiking', help='Involves hiking') 
 
     
 col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
-    food = st.checkbox('Food', help='Food is included')
-with col12:
-    hiking = st.checkbox('Hiking', help='Involves hiking')   
-with col13:
     transport = st.checkbox('Includes Transport', help='Transport from A to B, includes passes and hop-on/off tours')
-with col14:
-    island = st.checkbox('Island Hopping', help='Visiting an island')    
-with col15:
+with col12:
+    island = st.checkbox('Island Hopping', help='Visiting an island')      
+with col13:
     land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
+with col14:
+    city = st.checkbox('Located In City', help='Activities that takes place in the City')
+with col15:
+    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
 
 
 col16, col17, col18, col19, col20 = st.columns(5)
 with col16:
-    city = st.checkbox('Located In City', help='Activities that takes place in the City')
-with col17:
-    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
-with col18:
     mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
-with col19:
+with col17:
     park = st.checkbox('Park', help='Visiting Parks and Gardens')
-with col20:
+with col18:
     photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
+with col19:
+    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
+with col20:
+    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
 
 col21, col22,col23,col24,col25 = st.columns(5)
 with col21:
-    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
-with col22:
-    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
-with col23:
     sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
-with col24:
-    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')    
-with col25:
-    wildlife = st.checkbox('Wildlife Spotting', help ='Spotting wildlife')
+with col22:
+    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')
+with col23:
+    wildlife = st.checkbox('Wildlife Spotting', help ='Sealife spotting, Bird Watching')
+
     
 if sightseeing:
     st.subheader('Activity needs to include Sightseeing:')
@@ -183,25 +179,25 @@ if rental:
     rentals = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="22")
 else: 
     rentals = 0
-if activities:
-    st.subheader('Engaging in an activity:')
-    activity = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="23")
-else: 
-    activity = 0
+# if activities:
+#     st.subheader('Engaging in an activity:')
+#     activity = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="23")
+# else: 
+#     activity = 0
 if mountain_views:
     st.subheader('Having Mountain views:')
     mount_views = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="24")
 else: 
     mount_views = 0
-if food:
-    st.subheader('Food Must be included in the activity:')
-    foods = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="25")
-else: 
-    foods = 0
+# if food:
+#     st.subheader('Food Must be included in the activity:')
+#     foods = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="25")
+# else: 
+#     foods = 0
 
 values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature + accommodation + 
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
-          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + activities + mountain_views + food)
+          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + mountain_views)
 
 # button1, button2, na1, na2, na3 = st.columns(5)
 # with button1:
@@ -265,7 +261,7 @@ if submit:
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
            'brewery/winery/distillery': brewery_distillery_winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-           'rental': rentals, 'activities': activity, 'mountain views': mount_views, 'food': foods}
+           'rental': rentals, 'mountain views': mount_views}
                       
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
@@ -278,10 +274,9 @@ if submit:
         
         #display with the columns
         colres1, colres2, = st.columns(2)
-
         with colres1:
             st.image((image[0]), use_column_width='always')
-            st.markdown(f"[{(' '.join(names[0].split('_'))).title()}]")
+            st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
 
         with colres2:
             st.image((image[1]), use_column_width='always')
@@ -297,7 +292,6 @@ if submit:
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
         
         colres5, colres6 = st.columns(2)
-
         with colres5:
             st.image((image[4]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
@@ -331,6 +325,7 @@ def add_bg_from_url():
              font-size: 17px;
              font-weight: bold;
              color:#5A5A5A;
+         }}
          </style>
          """,
          unsafe_allow_html=True
@@ -338,8 +333,10 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
+
 # .stApp (background)
 # .css-1aqmucy svg (background)
 # h3 (header 3)
 # .css-81oif8, .css-10y5sf6, .css-1inwz65 (
-
+# activities = st.checkbox('Activities', help='Engaging in an activity')
+# food = st.checkbox('Food', help='Food is included')
