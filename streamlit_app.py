@@ -335,8 +335,9 @@ def add_bg_from_url():
              font-weight: bold;
              color:#5A5A5A;            
          }}
-         .css-1h6yrjv p {{
-             color:#5A5A5A;
+         .css-1h6yrjv {{
+             color: #5A5A5A;
+             background-color:white;
          }}
          </style>
          """,
