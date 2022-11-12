@@ -310,7 +310,7 @@ def add_bg_from_url():
          .stApp {{
          background-color: #F0FFFF;
          }}
-         svg.css-15hz85m, svg.css-1aqmucy {{
+         svg.icon {{
              stroke: rgb(49, 51, 63);
          }}
          .css-10trblm.e16nr0p30 {{
