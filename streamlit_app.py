@@ -335,6 +335,9 @@ def add_bg_from_url():
              font-weight: bold;
              color:#5A5A5A;            
          }}
+         .css-1fv8s86:hover {{
+             color:#5A5A5A;
+         }}
          </style>
          """,
          unsafe_allow_html=True
