@@ -206,7 +206,6 @@ submit = st.button('Show Recommendation')
 submit2 = st.button("Help me decide!")
 
     
-    
 # Randomizer if they cannot decide on the type of activites
 if submit2:
     api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
@@ -311,7 +310,7 @@ def add_bg_from_url():
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
          }}
-         h3 {{
+         h3, .css-1fv8s86.e16nr0p34 {{
              font-size: 28px;
              font-weight: bold;
              color:#5A5A5A;  
@@ -321,7 +320,7 @@ def add_bg_from_url():
              font-weight: bold;
              color:#5A5A5A;         
          }}
-         .css-81oif8, .css-10y5sf6, .css-1inwz65 {{
+         .css-81oif8, .css-10y5sf6, .css-1inwz65, .css-k3w14i .effi0qh3 {{
              font-size: 17px;
              font-weight: bold;
              color:#5A5A5A;
@@ -332,6 +331,7 @@ def add_bg_from_url():
      )
 
 add_bg_from_url() 
+
 
 
 # .stApp (background)
