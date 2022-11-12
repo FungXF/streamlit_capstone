@@ -310,7 +310,7 @@ def add_bg_from_url():
          .stApp {{
          background-color: #F0FFFF;
          }}
-         .css-1aqmucy svg {{
+         .css-1aqmucy .icon svg {{
              stroke: rgb(49, 51, 63);
          }}
          [id=“wondering-what-to-do-during-your-holiday”] {{
