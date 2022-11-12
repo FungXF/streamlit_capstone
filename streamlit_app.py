@@ -313,7 +313,7 @@ def add_bg_from_url():
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
          }}
-         .css-10trblm .e16nr0p30 span{{
+         .css-10trblm {{
              color::#5A5A5A;
          }}
          h3, .css-1fv8s86.e16nr0p34 {{
