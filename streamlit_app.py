@@ -313,7 +313,7 @@ def add_bg_from_url():
          svg.icon {{
              stroke: rgb(49, 51, 63);
          }}
-         h3, .css-1fv8s86, .e16nr0p34 {{
+         h3 {{
              font-size: 28px;
              font-weight: bold;
              color:#5A5A5A;  
