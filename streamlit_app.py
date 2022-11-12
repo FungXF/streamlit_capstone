@@ -326,7 +326,7 @@ def add_bg_from_url():
              font-weight: bold;
              color:#5A5A5A;         
          }}
-         .css-k3w14i {{
+         .css-81oif8, .css-k3w14i {{
              font-size: 17px;
              font-weight: bold;
              color:#5A5A5A;
