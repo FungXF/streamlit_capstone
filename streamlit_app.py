@@ -4,8 +4,10 @@ import json
 from PIL import Image
 
 st.set_page_config(layout="wide")
-st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Wondering what to do during your holiday?</b></p>', unsafe_allow_html=True)
-st.markdown('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
+# st.title('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Wondering what to do during your holiday?</b></p>', unsafe_allow_html=True)
+# st.header('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
+st.title('Wondering what to do during your holiday?')
+st.header('Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!')
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
