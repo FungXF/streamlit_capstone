@@ -7,7 +7,8 @@ st.set_page_config(layout="wide")
 # st.title('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Wondering what to do during your holiday?</b></p>', unsafe_allow_html=True)
 # st.header('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
 st.title('Wondering what to do during your holiday?')
-st.header('Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!')
+st.header('Welcome!')
+st.header('In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!')
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -311,6 +312,9 @@ def add_bg_from_url():
          }}
          .css-1aqmucy svg {{
              stroke: rgb(49, 51, 63);
+         }}
+         .css-10trblm.e16nr0p30{{
+             color::#5A5A5A;
          }}
          h3, .css-1fv8s86.e16nr0p34 {{
              font-size: 28px;
