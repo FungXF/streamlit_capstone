@@ -273,12 +273,16 @@ if submit:
         names = output['names']
         url = output['url']
         image = output['image']
+        description = output['description']
+        price = output['price']
+        duration = output['duration']
         
         #display with the columns
         colres1, colres2, = st.columns(2)
         with colres1:
             st.image((image[0]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
+            st.markdown(f"{description[0]}\n {price[0]} \n {duration[0]}")
 
         with colres2:
             st.image((image[1]), use_column_width='always')
