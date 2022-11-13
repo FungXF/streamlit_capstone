@@ -282,8 +282,7 @@ if submit:
         with colres1:
             st.image((image[0]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-            st.markdown(f"{description[0]}")
-            #\n {price[0]} \n {duration[0]})
+            st.markdown(f"{description[0]} \n {price[0]} \n {duration[0]}")
 
         with colres2:
             st.image((image[1]), use_column_width='always')
