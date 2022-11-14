@@ -35,40 +35,44 @@ with col8:
 with col9:
     rental = st.checkbox('Equipment Rental', help='Only renting of equipment (snowboard, bicycle, boat, etc), no tours')
 with col10:
-    hiking = st.checkbox('Hiking', help='Involves hiking') 
+    food = st.checkbox('Food Tour', help='Food Tour!')
 
     
 col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
-    transport = st.checkbox('Includes Transport', help='Transport from A to B, includes passes and hop-on/off tours')
+    hiking = st.checkbox('Hiking', help='Involves hiking') 
 with col12:
-    island = st.checkbox('Island Hopping', help='Visiting an island')      
+    transport = st.checkbox('Includes Transport', help='Transport from A to B, includes passes and hop-on/off tours')  
 with col13:
-    land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
+    island = st.checkbox('Island Hopping', help='Visiting an island')    
 with col14:
-    city = st.checkbox('Located In City', help='Activities that takes place in the City')
+    land_tour = st.checkbox('Land Tour', help='Tour in the Land with Guide')
 with col15:
-    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
+    city = st.checkbox('Located In City', help='Activities that takes place in the City')
+
 
 
 col16, col17, col18, col19, col20 = st.columns(5)
 with col16:
-    mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
+    nature = st.checkbox('Located In Nature', help='Activities that takes place in Nature/Mountain')
 with col17:
-    park = st.checkbox('Park', help='Visiting Parks and Gardens')
+    mountain_views = st.checkbox('Mountain Views',help='Having Mountain Views')
 with col18:
-    photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
+    park = st.checkbox('Park', help='Visiting Parks and Gardens')
 with col19:
-    cruise = st.checkbox('River Cruise', help='E.g. Wildlife watching, river cruise, ferry to another island')
+    photography = st.checkbox('Photoshoot', help='Photography service is provided/included')
 with col20:
-    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')
+    cruise = st.checkbox('River Cruise', help='E.g. River Cruise, Ferry to another island')
+
 
 col21, col22,col23,col24,col25 = st.columns(5)
 with col21:
-    sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
+    sea_tour = st.checkbox('Sea Tour', help='Tour in the Sea with Guide')    
 with col22:
-    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')
+    sightseeing = st.checkbox('Sightseeing', help='Visting places of Interest')
 with col23:
+    experience = st.checkbox('Unique Experience', help='Experience an activity/do something "extra-ordinary"')
+with col24:
     wildlife = st.checkbox('Wildlife Spotting', help ='Sealife spotting, Bird Watching, etc..')
 
     
@@ -192,15 +196,15 @@ if mountain_views:
     mount_views = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="24")
 else: 
     mount_views = 0
-# if food:
-#     st.subheader('Food Must be included in the activity:')
-#     foods = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="25")
-# else: 
-#     foods = 0
+if food:
+    st.subheader('Food Must be included in the activity:')
+    foods = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="25")
+else: 
+    foods = 0
 
 values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature + accommodation + 
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
-          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + mountain_views)
+          brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + mountain_views + food)
 
 # button1, button2, na1, na2, na3 = st.columns(5)
 # with button1:
@@ -219,7 +223,8 @@ if submit2:
     output = response.json()
     names = output['names']
     url = output['url']
-    image = output['image']    
+    image = output['image']
+    description = output['description']    
     
     #display with the columns
     colrand1, colrand2, = st.columns(2)
@@ -227,29 +232,35 @@ if submit2:
     with colrand1:
         st.image((output['image'][0]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
+        st.markdown(f"{description[0]}")
 
     with colrand2:
         st.image((output['image'][1]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
-
+        st.markdown(f"{description[1]}")
+        
     colrand3, colrand4 = st.columns(2)
     with colrand3:
         st.image((output['image'][2]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
-
+        st.markdown(f"{description[2]}")
+        
     with colrand4:
         st.image((output['image'][3]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
-
+        st.markdown(f"{description[3]}")
+        
     colrand5, colrand6 = st.columns(2)
 
     with colrand5:
         st.image((output['image'][4]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
+        st.markdown(f"{description[4]}")
 
     with colrand6:
         st.image((output['image'][5]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
+        st.markdown(f"{description[5]}")
 
 # After selecting the 5 categories of activites, the recommender would then pull out the top 6 recommended activites
 if submit:
@@ -282,29 +293,34 @@ if submit:
         with colres1:
             st.image((image[0]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-            st.markdown(f"{description[0]} \n {price[0]} \n {duration[0]}")
+            st.markdown(f"{description[0]}")
 
         with colres2:
             st.image((image[1]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
+            st.markdown(f"{description[1]}")
         
         colres3, colres4 = st.columns(2)
         with colres3:
             st.image((image[2]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
+            st.markdown(f"{description[2]}")
         
         with colres4:
             st.image((image[3]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
+            st.markdown(f"{description[3]}")
         
         colres5, colres6 = st.columns(2)
         with colres5:
             st.image((image[4]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
+            st.markdown(f"{description[4]}")
 
         with colres6:
             st.image((image[5]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
+            st.markdown(f"{description[5]}")
 
 # Changing the background and words styling and colours                       
 def add_bg_from_url():
