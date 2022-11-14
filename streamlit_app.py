@@ -274,7 +274,7 @@ if submit:
            'classes & workshops': class_work, 'transport': trans, 'experience': exp, 
            'brewery/winery/distillery': brewery_distillery_winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
-           'rental': rentals, 'mountain views': mount_views}
+           'rental': rentals, 'mountain views': mount_views, 'food': food}
                       
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
@@ -285,8 +285,8 @@ if submit:
         url = output['url']
         image = output['image']
         description = output['description']
-        price = output['price']
-        duration = output['duration']
+        # price = output['price']
+        # duration = output['duration']
         
         #display with the columns
         colres1, colres2, = st.columns(2)
