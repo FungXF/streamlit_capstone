@@ -364,9 +364,18 @@ def add_bg_from_url():
              color: #5A5A5A;
              background-color:white;
          }}
+         .st-co {{
+             color: #000000
+         }}
+         .st-da {{ border-color: black;}}
          </style>
          """,
          unsafe_allow_html=True
      )
 
 add_bg_from_url() 
+
+         # .st-db {{
+         #     color: #000000
+         #     border-color: #000000
+         # }}
