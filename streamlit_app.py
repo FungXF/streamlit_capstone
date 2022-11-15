@@ -365,7 +365,7 @@ def add_bg_from_url():
              background-color:white;
          }}
          .st-co {{
-             color: #000000
+             color: #000000;
          }}
          .st-da {{ border-color: black;}}
          </style>
