@@ -4,11 +4,10 @@ import json
 from PIL import Image
 
 st.set_page_config(layout="wide")
-# st.title('<p style="font-family:helvetica; color:#5A5A5A; font-size: 50px;"><b>Wondering what to do during your holiday?</b></p>', unsafe_allow_html=True)
-# st.header('<p style="font-family:helvetica; color:#5A5A5A; font-size: 30px;"><b>Welcome! <br>In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!</b></p>', unsafe_allow_html=True)
+
 st.title('Wondering what to do during your holiday?')
-st.header('Welcome!')
-st.header('In this travel recommender, select the top 5 categories you would like to do as part of an activity when you are travelling!')
+st.header('Welcome to my Travel Recommender!')
+st.header('Select the top 5 categories you would like to do as part of an activity when you are travelling!')
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -186,11 +185,6 @@ if rental:
     rentals = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="22")
 else: 
     rentals = 0
-# if activities:
-#     st.subheader('Engaging in an activity:')
-#     activity = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="23")
-# else: 
-#     activity = 0
 if mountain_views:
     st.subheader('Having Mountain views:')
     mount_views = st.slider('On a scale of 1 (Its ok to have) to 5 (Must Have)',1,5,3, key="24")
@@ -206,10 +200,9 @@ values = (sightseeing + land_tour + air_tour + sea_tour + park + city + nature +
           camping + cruise + island + entertainment + classes_and_workshops + transport + experience + 
           brew_dis_win + photography + wildlife + adventure + beach + hiking + rental + mountain_views + food)
 
-# button1, button2, na1, na2, na3 = st.columns(5)
-# with button1:
+
 submit = st.button('Show Recommendation')    
-# with button2:
+
 submit2 = st.button("Help me decide!")
 
     
@@ -232,7 +225,7 @@ if submit2:
     with colrand1:
         st.image((output['image'][0]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[0]}")
 
     with colrand2:
@@ -291,8 +284,6 @@ if submit:
         url = output['url']
         image = output['image']
         description = output['description']
-        # price = output['price']
-        # duration = output['duration']
         
         #display with the columns
         colres1, colres2, = st.columns(2)
@@ -334,7 +325,9 @@ if submit:
             with st.expander("See Summary"):
                 st.markdown(f"{description[5]}")
 
-# Changing the background and words styling and colours                       
+# Changing the background and words styling and colours 
+# Background-colour changes background colour
+# svg.icon: 
 def add_bg_from_url():
     st.markdown(
          f"""
@@ -377,12 +370,3 @@ def add_bg_from_url():
      )
 
 add_bg_from_url() 
-
-
-
-# .stApp (background)
-# .css-1aqmucy svg (background)
-# h3 (header 3)
-# .css-81oif8, .css-10y5sf6, .css-1inwz65 (
-# activities = st.checkbox('Activities', help='Engaging in an activity')
-# food = st.checkbox('Food', help='Food is included')
