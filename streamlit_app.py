@@ -231,20 +231,20 @@ if submit2:
     with colrand2:
         st.image((output['image'][1]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[1]}")
         
     colrand3, colrand4 = st.columns(2)
     with colrand3:
         st.image((output['image'][2]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[2]}")
         
     with colrand4:
         st.image((output['image'][3]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[3]}")
         
     colrand5, colrand6 = st.columns(2)
@@ -252,13 +252,13 @@ if submit2:
     with colrand5:
         st.image((output['image'][4]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[4]}")
 
     with colrand6:
         st.image((output['image'][5]), use_column_width='always')
         st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
-        with st.expander("See Summary"):
+        with st.expander("Read More"):
             st.markdown(f"{description[5]}")
 
 # After selecting the 5 categories of activites, the recommender would then pull out the top 6 recommended activites
@@ -290,44 +290,44 @@ if submit:
         with colres1:
             st.image((image[0]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[0].split('_'))).title()}](%s)" % url[0])
-            with st.expander("See Summary"):
+            with st.expander("Read More"):
                 st.markdown(f"{description[0]}")
 
         with colres2:
             st.image((image[1]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[1].split('_'))).title()}](%s)" % url[1])
-            with st.expander("See Summary"):
+            with st.expander("Read More"):
                 st.markdown(f"{description[1]}")
         
         colres3, colres4 = st.columns(2)
         with colres3:
             st.image((image[2]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[2].split('_'))).title()}](%s)" % url[2])
-            with st.expander("See Summary"):
+            with st.expander("Read More"):
                 st.markdown(f"{description[2]}")
         
         with colres4:
             st.image((image[3]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[3].split('_'))).title()}](%s)" % url[3])
-            with st.expander("See Summary"):            
+            with st.expander("Read More"):            
                 st.markdown(f"{description[3]}")
         
         colres5, colres6 = st.columns(2)
         with colres5:
             st.image((image[4]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[4].split('_'))).title()}](%s)" % url[4])
-            with st.expander("See Summary"):
+            with st.expander("Read More"):
                 st.markdown(f"{description[4]}")
 
         with colres6:
             st.image((image[5]), use_column_width='always')
             st.markdown(f"[{(' '.join(names[5].split('_'))).title()}](%s)" % url[5])
-            with st.expander("See Summary"):
+            with st.expander("Read More"):
                 st.markdown(f"{description[5]}")
 
 # Changing the background and words styling and colours 
 # Background-colour changes background colour
-# svg.icon: 
+# svg.icon: the question mark
 def add_bg_from_url():
     st.markdown(
          f"""
@@ -364,18 +364,14 @@ def add_bg_from_url():
              color: #5A5A5A;
              background-color:white;
          }}
-         .st-co {{
+         .st-co, .st-cp {{
              color: #000000;
          }}
-         .st-da {{ border-color: black;}}
+         .st-da, .st-cx {{ border-color: black;}}
+         </style>
          </style>
          """,
          unsafe_allow_html=True
      )
 
 add_bg_from_url() 
-
-         # .st-db {{
-         #     color: #000000
-         #     border-color: #000000
-         # }}
