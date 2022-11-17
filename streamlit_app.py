@@ -5,7 +5,7 @@ from PIL import Image
 
 st.set_page_config(page_title ='WanderLust', layout="wide", page_icon= '✈️')
 
-st.image("https://iili.io/H906Las.md.png",width=200)
+st.image("https://iili.io/H906Las.md.png",width=300)
 st.title('_Wandering_ what to do during your holiday?')
 st.header('Select the top 5 categories you would like to do as part of an activity when you are travelling!')
 st.markdown("By: Fung Xue Feng ([GitHub](https://github.com/FungXF))([Linkedin](https://www.linkedin.com/in/xue-feng-fung/))")
