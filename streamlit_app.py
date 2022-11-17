@@ -274,32 +274,7 @@ if submit:
            'brewery/winery/distillery': brewery_distillery_winery, 'photography': photo,
            'wildlife': wild, 'adventure': advent, 'beach': beaches, 'hiking': hike, 
            'rental': rentals, 'mountain views': mount_views, 'food': foods}
-         
-        st.write(f"{sight} sight")    
-        st.write(f"{land_t} landt")
-        st.write(f"{air_t} airt")
-        st.write(f"{sea_t} seat")    
-        st.write(f"{parks} park")
-        st.write(f"{in_city} city")
-        st.write(f"{nat} nature")    
-        st.write(f"{accom} accommodation")
-        st.write(f"{camp} camping")
-        st.write(f"{crui} cruise")    
-        st.write(f"{islands} island")
-        st.write(f"{enter} entertainment")
-        st.write(f"{class_work} classes & workshops")    
-        st.write(f"{trans} transport")
-        st.write(f"{exp} experience")
-        st.write(f"{brewery_distillery_winery} brewery/winery/distillery")    
-        st.write(f"{photo} photography")
-        st.write(f"{wild} wildlife")
-        st.write(f"{advent} adventure")    
-        st.write(f"{beaches} beach")
-        st.write(f"{hike} hiking")
-        st.write(f"{rentals} rental")
-        st.write(f"{mount_views} mountain views")
-        st.write(f"{foods} food")
-                                                
+                                                        
         api_url = 'https://dsicapstone-l7bv2piloq-as.a.run.app'
         api_route = '/predict'
 
